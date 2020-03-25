@@ -2,17 +2,133 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
-    font-weight: normal;
 }
 
+body {
+    margin: 0px;
+    padding: 0px 0px 50px 0px;
+    width: 100%;
+}
+
+.navbar, .content {
+    padding-top: 72px;
+}
+
+.navbar {
+    float: left;
+    width: 20%;
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.content {
+    float: right;
+    width: 80%;
+}
+
+.navbar-header {
+    padding:0px 30px ;
+}
+
+.navbar-header .logo {
+    display: block;
+    margin-bottom: 24px;
+}
+
+.navbar-header .nav-title {
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.nav-items{
+    padding-left: 0px;
+    list-style: none;
+}
+
+.nav-item {
+    padding:11px 30px ;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.nav-item i{
+    margin-right: 10px;
+    color: #C6CBD4;
+}
+
+.nav-item:hover, .nav-item:hover > i {
+    mix-blend-mode: normal;
+    color: #4B74FF;
+    font-weight: bold;
+    background: #C6CBD4;
+}
+
+.content {
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.content-head {
+    margin-bottom: 24px;
+}
+
+.content-head .header-title {
+    float: left;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.content-head .header-title h1 {
+    margin: 0px;
+}
+
+.content-head .header-actions {
+    float: right;
+}
+
+.btn {
+    height: 32px;
+    padding-left: 12px;
+    padding-right: 12px;
+    border: none;
+    border-radius: 2px;
+    font-size: 14px;
+    line-height: 24px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.btn:active {
+    transform: scale(0.99);
+}
+
+.btn.btn-primary {
+    color: #FFFFFF;
+    background: #4B74FF;
+}
+
+.btn.btn-secondary-outline {
+    border: 1px solid #C6CBD4;
+    background: #FBFBFB;
+}
+
+.clear {
+    clear: both;
+}
+
+/* table */
 .table {
     margin: 0 auto;
+    width: 100%;
     border-collapse: collapse;
 }
 
 .table-head .row th {
     font-weight: 800;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
     padding: 12px;
     color: #333333;
@@ -24,9 +140,12 @@
 
 .table-body .row td {
     font-weight: normal;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 24px;
-    padding: 24px;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 
 .table-body .row:nth-child(odd) {
@@ -37,17 +156,17 @@
     padding-left: 37px;
 }
 
-.column-status i {
+.status-circle {
     font-size: 8px;
     margin-right: 5px;
     color: #0EDD4D;
 }
 
-.table-head tr .column-company {
+.table-head tr .active {
     color: #4B74FF;
 }
 
-.table-head tr .column-company i{
+.table-head tr i{
     color: black;
     margin-left: 10px;
 }
@@ -57,4 +176,22 @@
     color: white;
     background: #4B74FF;
     border-radius: 4px;
+}
+
+.text-left {
+    text-align: left;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+@media(max-width: 960px) {
+    .content-body {
+        overflow-x: scroll;
+    }
 }
